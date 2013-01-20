@@ -1,0 +1,28 @@
+sdkversion: "3.5.0"
+name: "Spectre"
+version: "1.0"
+vendor: "rhomobile"
+build: "debug"
+bbver: "4.6"
+applog: "rholog.txt"
+iphone:
+  configuration: "Release"
+  sdk: "iphonesimulator5.0"
+  provisionprofile: 
+  codesignidentity: 
+  entitlements: 
+  BundleIdentifier: "com.rhomobile.spectre"
+  BundleURLScheme: "spectre"
+  emulatortarget: "iphone"
+wp:
+  productid: "867e4480-44b7-0130-c1fe-00224126533f"
+symbian:
+  uid: "0xeff9e7a6"
+android:
+  version: "2.1"
+extensions:
+  - json
+  - another-extension
+app_type: "rhoelements"
+capabilities:
+  - non_motorola_device

@@ -1,0 +1,38 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :index %>
+    <h1>New ShoeBox</h1>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @shoebox.object %>"/>
+      <table>
+          
+            <tr>
+                <td class="itemLabel">Receipts: </td>
+                <td class="itemValue"><input type="text" name="shoebox[Receipts]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Bills: </td>
+                <td class="itemValue"><input type="text" name="shoebox[Bills]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Checkbook: </td>
+                <td class="itemValue"><input type="text" name="shoebox[CheckBook]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Documents: </td>
+                <td class="itemValue"><input type="text" name="shoebox[Documents]"/></td>
+            </tr>
+          
+      </table>
+      <input type="submit" value="Create"/>
+    </form>
+  </div>
+
+</div>

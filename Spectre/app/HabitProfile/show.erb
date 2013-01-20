@@ -1,0 +1,39 @@
+<div data-role="page" data-add-back-btn="false">
+
+  <div data-role="header" data-position="inline">
+    <h1><%= @habitprofile.TimeData %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="arrow-l" data-direction="reverse">
+      Back
+    </a>
+    <a href="<%= url_for :action => :edit, :id => @habitprofile.object %>" class="ui-btn-right" data-icon="star">
+      Edit
+    </a>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+      
+          <li>
+            <div class="itemLabel">TimeData</div>
+            <div class="itemValue"><%= @habitprofile.TimeData %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">LocationData</div>
+            <div class="itemValue"><%= @habitprofile.LocationData %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">ActionData</div>
+            <div class="itemValue"><%= @habitprofile.ActionData %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">FinanceData</div>
+            <div class="itemValue"><%= @habitprofile.FinanceData %></div>
+          </li>
+      
+    </ul>
+  </div>
+
+</div>

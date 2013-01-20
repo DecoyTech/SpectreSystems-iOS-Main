@@ -1,0 +1,39 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :show, :id => @location.object %>
+    <h1>Edit <%= @location.Coordinates%></h1>
+    <%= link_to "Delete", :action => :delete, :id => @location.object %>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @location.object %>"/>
+      <table>
+          
+          <tr>
+              <td class="itemLabel">Coordinates: </td>
+              <td class="itemValue"><input type="text" name="location[Coordinates]" value="<%= @location.Coordinates %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Address: </td>
+              <td class="itemValue"><input type="text" name="location[Address]" value="<%= @location.Address %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Name: </td>
+              <td class="itemValue"><input type="text" name="location[Name]" value="<%= @location.Name %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Icon: </td>
+              <td class="itemValue"><input type="text" name="location[Icon]" value="<%= @location.Icon %>"/></td>
+          </tr>
+          
+      </table>
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>

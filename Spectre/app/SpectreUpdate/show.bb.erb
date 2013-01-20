@@ -1,0 +1,35 @@
+<div data-role="page" data-add-back-btn="true">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :index %>
+    <h1><%= @spectreupdate.Title %></h1>
+    <%= link_to "Edit", :action => :edit, :id => @spectreupdate.object %>
+  </div>
+
+  <div data-role="content">
+    <table>
+      
+      <tr>
+    	<td class="itemLabel">Title</td>
+        <td class="itemValue"><%= @spectreupdate.Title%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Image</td>
+        <td class="itemValue"><%= @spectreupdate.Image%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Date</td>
+        <td class="itemValue"><%= @spectreupdate.Date%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Content</td>
+        <td class="itemValue"><%= @spectreupdate.Content%></td>
+      </tr>
+      
+    </table>
+  </div>
+
+</div>

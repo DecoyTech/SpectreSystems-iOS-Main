@@ -1,0 +1,43 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :index %>
+    <h1>New Time</h1>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @time.object %>"/>
+      <table>
+          
+            <tr>
+                <td class="itemLabel">Spenthere: </td>
+                <td class="itemValue"><input type="text" name="time[SpentHere]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Spentmoving: </td>
+                <td class="itemValue"><input type="text" name="time[SpentMoving]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Currenttime: </td>
+                <td class="itemValue"><input type="text" name="time[CurrentTime]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Currentday: </td>
+                <td class="itemValue"><input type="text" name="time[CurrentDay]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Currentdate: </td>
+                <td class="itemValue"><input type="text" name="time[CurrentDate]"/></td>
+            </tr>
+          
+      </table>
+      <input type="submit" value="Create"/>
+    </form>
+  </div>
+
+</div>

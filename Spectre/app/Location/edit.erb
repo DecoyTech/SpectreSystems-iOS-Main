@@ -1,0 +1,41 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Edit <%= @location.Coordinates %></h1>
+    <a href="<%= url_for :action => :show, :id => @location.object %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+    <a href="<%= url_for :action => :delete, :id => @location.object %>" class="ui-btn-right" data-icon="delete" data-direction="reverse">
+      Delete
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @location.object %>"/>
+      
+          <div data-role="fieldcontain">
+            <label for="location[Coordinates]" class="fieldLabel">Coordinates</label>
+            <input type="text" id="location[Coordinates]" name="location[Coordinates]" value="<%= @location.Coordinates %>" <%= placeholder( "Coordinates" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="location[Address]" class="fieldLabel">Address</label>
+            <input type="text" id="location[Address]" name="location[Address]" value="<%= @location.Address %>" <%= placeholder( "Address" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="location[Name]" class="fieldLabel">Name</label>
+            <input type="text" id="location[Name]" name="location[Name]" value="<%= @location.Name %>" <%= placeholder( "Name" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="location[Icon]" class="fieldLabel">Icon</label>
+            <input type="text" id="location[Icon]" name="location[Icon]" value="<%= @location.Icon %>" <%= placeholder( "Icon" ) %> />
+          </div>
+      
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>

@@ -1,0 +1,56 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Edit <%= @finance.SpentTotal %></h1>
+    <a href="<%= url_for :action => :show, :id => @finance.object %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+    <a href="<%= url_for :action => :delete, :id => @finance.object %>" class="ui-btn-right" data-icon="delete" data-direction="reverse">
+      Delete
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @finance.object %>"/>
+      
+          <div data-role="fieldcontain">
+            <label for="finance[SpentTotal]" class="fieldLabel">Spenttotal</label>
+            <input type="text" id="finance[SpentTotal]" name="finance[SpentTotal]" value="<%= @finance.SpentTotal %>" <%= placeholder( "Spenttotal" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="finance[SpentOn]" class="fieldLabel">Spenton</label>
+            <input type="text" id="finance[SpentOn]" name="finance[SpentOn]" value="<%= @finance.SpentOn %>" <%= placeholder( "Spenton" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="finance[SpentWhere]" class="fieldLabel">Spentwhere</label>
+            <input type="text" id="finance[SpentWhere]" name="finance[SpentWhere]" value="<%= @finance.SpentWhere %>" <%= placeholder( "Spentwhere" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="finance[SpentWhen]" class="fieldLabel">Spentwhen</label>
+            <input type="text" id="finance[SpentWhen]" name="finance[SpentWhen]" value="<%= @finance.SpentWhen %>" <%= placeholder( "Spentwhen" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="finance[IncomeTotal]" class="fieldLabel">Incometotal</label>
+            <input type="text" id="finance[IncomeTotal]" name="finance[IncomeTotal]" value="<%= @finance.IncomeTotal %>" <%= placeholder( "Incometotal" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="finance[IncomeFrom]" class="fieldLabel">Incomefrom</label>
+            <input type="text" id="finance[IncomeFrom]" name="finance[IncomeFrom]" value="<%= @finance.IncomeFrom %>" <%= placeholder( "Incomefrom" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="finance[BalanceTotal]" class="fieldLabel">Balancetotal</label>
+            <input type="text" id="finance[BalanceTotal]" name="finance[BalanceTotal]" value="<%= @finance.BalanceTotal %>" <%= placeholder( "Balancetotal" ) %> />
+          </div>
+      
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>

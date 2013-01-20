@@ -1,0 +1,46 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Edit <%= @time.SpentHere %></h1>
+    <a href="<%= url_for :action => :show, :id => @time.object %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+    <a href="<%= url_for :action => :delete, :id => @time.object %>" class="ui-btn-right" data-icon="delete" data-direction="reverse">
+      Delete
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @time.object %>"/>
+      
+          <div data-role="fieldcontain">
+            <label for="time[SpentHere]" class="fieldLabel">Spenthere</label>
+            <input type="text" id="time[SpentHere]" name="time[SpentHere]" value="<%= @time.SpentHere %>" <%= placeholder( "Spenthere" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="time[SpentMoving]" class="fieldLabel">Spentmoving</label>
+            <input type="text" id="time[SpentMoving]" name="time[SpentMoving]" value="<%= @time.SpentMoving %>" <%= placeholder( "Spentmoving" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="time[CurrentTime]" class="fieldLabel">Currenttime</label>
+            <input type="text" id="time[CurrentTime]" name="time[CurrentTime]" value="<%= @time.CurrentTime %>" <%= placeholder( "Currenttime" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="time[CurrentDay]" class="fieldLabel">Currentday</label>
+            <input type="text" id="time[CurrentDay]" name="time[CurrentDay]" value="<%= @time.CurrentDay %>" <%= placeholder( "Currentday" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="time[CurrentDate]" class="fieldLabel">Currentdate</label>
+            <input type="text" id="time[CurrentDate]" name="time[CurrentDate]" value="<%= @time.CurrentDate %>" <%= placeholder( "Currentdate" ) %> />
+          </div>
+      
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>

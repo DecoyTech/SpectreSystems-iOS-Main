@@ -1,0 +1,54 @@
+<div data-role="page" data-add-back-btn="false">
+
+  <div data-role="header" data-position="inline">
+    <h1><%= @finance.SpentTotal %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="arrow-l" data-direction="reverse">
+      Back
+    </a>
+    <a href="<%= url_for :action => :edit, :id => @finance.object %>" class="ui-btn-right" data-icon="star">
+      Edit
+    </a>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+      
+          <li>
+            <div class="itemLabel">SpentTotal</div>
+            <div class="itemValue"><%= @finance.SpentTotal %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">SpentOn</div>
+            <div class="itemValue"><%= @finance.SpentOn %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">SpentWhere</div>
+            <div class="itemValue"><%= @finance.SpentWhere %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">SpentWhen</div>
+            <div class="itemValue"><%= @finance.SpentWhen %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">IncomeTotal</div>
+            <div class="itemValue"><%= @finance.IncomeTotal %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">IncomeFrom</div>
+            <div class="itemValue"><%= @finance.IncomeFrom %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">BalanceTotal</div>
+            <div class="itemValue"><%= @finance.BalanceTotal %></div>
+          </li>
+      
+    </ul>
+  </div>
+
+</div>

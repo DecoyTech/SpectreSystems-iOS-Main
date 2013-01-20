@@ -1,0 +1,40 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>New <%= @shoebox.title %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @shoebox.object %>"/>
+
+      
+          <div data-role="fieldcontain">
+            <label for="shoebox[Receipts]" class="fieldLabel">Receipts</label>
+            <input type="text" id="shoebox[Receipts]" name="shoebox[Receipts]" <%= placeholder("Receipts") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="shoebox[Bills]" class="fieldLabel">Bills</label>
+            <input type="text" id="shoebox[Bills]" name="shoebox[Bills]" <%= placeholder("Bills") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="shoebox[CheckBook]" class="fieldLabel">Checkbook</label>
+            <input type="text" id="shoebox[CheckBook]" name="shoebox[CheckBook]" <%= placeholder("Checkbook") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="shoebox[Documents]" class="fieldLabel">Documents</label>
+            <input type="text" id="shoebox[Documents]" name="shoebox[Documents]" <%= placeholder("Documents") %> />
+          </div>
+      
+
+      <input type="submit" value="Create"/>
+    </form>
+  </div>
+
+</div>

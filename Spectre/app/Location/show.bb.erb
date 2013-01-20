@@ -1,0 +1,35 @@
+<div data-role="page" data-add-back-btn="true">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :index %>
+    <h1><%= @location.Coordinates %></h1>
+    <%= link_to "Edit", :action => :edit, :id => @location.object %>
+  </div>
+
+  <div data-role="content">
+    <table>
+      
+      <tr>
+    	<td class="itemLabel">Coordinates</td>
+        <td class="itemValue"><%= @location.Coordinates%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Address</td>
+        <td class="itemValue"><%= @location.Address%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Name</td>
+        <td class="itemValue"><%= @location.Name%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Icon</td>
+        <td class="itemValue"><%= @location.Icon%></td>
+      </tr>
+      
+    </table>
+  </div>
+
+</div>

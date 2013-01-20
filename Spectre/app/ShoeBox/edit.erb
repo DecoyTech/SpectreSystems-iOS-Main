@@ -1,0 +1,41 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Edit <%= @shoebox.Receipts %></h1>
+    <a href="<%= url_for :action => :show, :id => @shoebox.object %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+    <a href="<%= url_for :action => :delete, :id => @shoebox.object %>" class="ui-btn-right" data-icon="delete" data-direction="reverse">
+      Delete
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @shoebox.object %>"/>
+      
+          <div data-role="fieldcontain">
+            <label for="shoebox[Receipts]" class="fieldLabel">Receipts</label>
+            <input type="text" id="shoebox[Receipts]" name="shoebox[Receipts]" value="<%= @shoebox.Receipts %>" <%= placeholder( "Receipts" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="shoebox[Bills]" class="fieldLabel">Bills</label>
+            <input type="text" id="shoebox[Bills]" name="shoebox[Bills]" value="<%= @shoebox.Bills %>" <%= placeholder( "Bills" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="shoebox[CheckBook]" class="fieldLabel">Checkbook</label>
+            <input type="text" id="shoebox[CheckBook]" name="shoebox[CheckBook]" value="<%= @shoebox.CheckBook %>" <%= placeholder( "Checkbook" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="shoebox[Documents]" class="fieldLabel">Documents</label>
+            <input type="text" id="shoebox[Documents]" name="shoebox[Documents]" value="<%= @shoebox.Documents %>" <%= placeholder( "Documents" ) %> />
+          </div>
+      
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>

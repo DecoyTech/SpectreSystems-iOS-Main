@@ -1,0 +1,8 @@
+rhodes_path='/Users/Brian/.rvm/gems/ruby-1.9.3-p362/gems/rhodes-3.5.1.13'
+app_version='1.0'
+app_name='Spectre'
+reload_app_changes=0
+debug_port=
+debug_host='127.0.0.1'
+platform='iphone'
+ext_path=/Users/Brian/.rvm/gems/ruby-1.9.3-p362/gems/rhodes-3.5.1.13/lib/extensions/json;/Users/Brian/.rvm/gems/ruby-1.9.3-p362/gems/rhodes-3.5.1.13/lib/extensions/rawsensors;/Users/Brian/.rvm/gems/ruby-1.9.3-p362/gems/rhodes-3.5.1.13/lib/extensions/audiocapture;

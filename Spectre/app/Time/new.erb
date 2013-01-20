@@ -1,0 +1,45 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>New <%= @time.title %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @time.object %>"/>
+
+      
+          <div data-role="fieldcontain">
+            <label for="time[SpentHere]" class="fieldLabel">Spenthere</label>
+            <input type="text" id="time[SpentHere]" name="time[SpentHere]" <%= placeholder("Spenthere") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="time[SpentMoving]" class="fieldLabel">Spentmoving</label>
+            <input type="text" id="time[SpentMoving]" name="time[SpentMoving]" <%= placeholder("Spentmoving") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="time[CurrentTime]" class="fieldLabel">Currenttime</label>
+            <input type="text" id="time[CurrentTime]" name="time[CurrentTime]" <%= placeholder("Currenttime") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="time[CurrentDay]" class="fieldLabel">Currentday</label>
+            <input type="text" id="time[CurrentDay]" name="time[CurrentDay]" <%= placeholder("Currentday") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="time[CurrentDate]" class="fieldLabel">Currentdate</label>
+            <input type="text" id="time[CurrentDate]" name="time[CurrentDate]" <%= placeholder("Currentdate") %> />
+          </div>
+      
+
+      <input type="submit" value="Create"/>
+    </form>
+  </div>
+
+</div>

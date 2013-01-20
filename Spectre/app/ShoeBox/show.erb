@@ -1,0 +1,39 @@
+<div data-role="page" data-add-back-btn="false">
+
+  <div data-role="header" data-position="inline">
+    <h1><%= @shoebox.Receipts %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="arrow-l" data-direction="reverse">
+      Back
+    </a>
+    <a href="<%= url_for :action => :edit, :id => @shoebox.object %>" class="ui-btn-right" data-icon="star">
+      Edit
+    </a>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+      
+          <li>
+            <div class="itemLabel">Receipts</div>
+            <div class="itemValue"><%= @shoebox.Receipts %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Bills</div>
+            <div class="itemValue"><%= @shoebox.Bills %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">CheckBook</div>
+            <div class="itemValue"><%= @shoebox.CheckBook %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Documents</div>
+            <div class="itemValue"><%= @shoebox.Documents %></div>
+          </li>
+      
+    </ul>
+  </div>
+
+</div>

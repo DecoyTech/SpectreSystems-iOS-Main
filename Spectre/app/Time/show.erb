@@ -1,0 +1,44 @@
+<div data-role="page" data-add-back-btn="false">
+
+  <div data-role="header" data-position="inline">
+    <h1><%= @time.SpentHere %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="arrow-l" data-direction="reverse">
+      Back
+    </a>
+    <a href="<%= url_for :action => :edit, :id => @time.object %>" class="ui-btn-right" data-icon="star">
+      Edit
+    </a>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+      
+          <li>
+            <div class="itemLabel">SpentHere</div>
+            <div class="itemValue"><%= @time.SpentHere %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">SpentMoving</div>
+            <div class="itemValue"><%= @time.SpentMoving %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">CurrentTime</div>
+            <div class="itemValue"><%= @time.CurrentTime %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">CurrentDay</div>
+            <div class="itemValue"><%= @time.CurrentDay %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">CurrentDate</div>
+            <div class="itemValue"><%= @time.CurrentDate %></div>
+          </li>
+      
+    </ul>
+  </div>
+
+</div>
